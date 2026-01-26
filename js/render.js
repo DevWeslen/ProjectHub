@@ -9,7 +9,7 @@ projetos.forEach(projeto => {
   card.innerHTML = `
     <!-- Imagem -->
     <img
-      src="${projeto.imagem}" 
+      src="${projeto.imagem || 'https://via.placeholder.com/300x180?text=Projeto'}"
       alt="Imagem do projeto ${projeto.nome}"
       class="rounded mb-4 w-full h-48 object-cover"
     />
@@ -24,17 +24,19 @@ projetos.forEach(projeto => {
     <!-- Tecnologias -->
     <div class="flex gap-2 flex-wrap mb-4">
       ${projeto.tecnologias.map(tech => `
-        <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+        <span class="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded">
           ${tech}
         </span>
       `).join("")}
     </div>
 
     <!-- Botão -->
-    <button
-      class="mt-auto bg-black text-white py-2 rounded hover:bg-gray-800 transition">
+    <a
+      href="${projeto.github}"
+      target="_blank"
+      class="mt-auto bg-black text-white py-2 rounded text-center hover:bg-gray-800 transition">
       Ver projeto
-    </button>
+    </a>
   `;
 
   container.appendChild(card);

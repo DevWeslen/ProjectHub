@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meus Certificados | Weslen</title>
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -13,7 +14,6 @@
   <header class="bg-slate-900 text-white p-6">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
       <h1 class="flex items-center gap-3 text-2xl font-bold">
-        <!-- ÍCONE IGUAL AO INDEX -->
         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none"
              viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -27,414 +27,34 @@
   </header>
 
   <!-- CONTEÚDO -->
-  <main class="max-w-5xl mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-
-    <!--Inteligência Artificial IBM-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-      <h2 class="font-bold text-lg">
-        Artificial Intelligence Fundamentals</h2>
-      <p class="text-sm text-gray-600"> Curso 40hrs • IBM </p>
-
-      <div class="mt-4 flex items-center gap-3">
-
-        <span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-        </span>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/ArtificialIntelligenceFundamentals_Badge.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-        <!--Inteligência Artificial e o novo contexto na cultura digital - Fundação Bradesco-->
-      <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Inteligência Artificial e o novo contexto na cultura digital</h2>
-        <p class="text-sm text-gray-600"> Curso 20hrs • Fundação Bradesco </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Inteligência Artificial e o novo contexto na cultura digital.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-    <!--Estrutura de dados-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Estrutura de Dados</h2>
-        <p class="text-sm text-gray-600"> Curso 20hrs • IFRS </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Estrutura_de_Dados-Certificado_digital_1888765.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-     <!--Liderança e Resultados-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Liderança e Resultados</h2>
-        <p class="text-sm text-gray-600"> Curso 2hrs • Faculdade Líbano </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Certificado - Liderança e Resultados - Líbano.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-     <!--Comunicação Assertiva-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Comunicação Assertiva</h2>
-        <p class="text-sm text-gray-600"> Curso 2hrs • Faculdade Líbano </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Certificado - Comunicação Assertiva - Líbano.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-     
-    <!--Tecnologia de gestão na Agricultura-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Tecnologia na Gestão da Agricultura</h2>
-        <p class="text-sm text-gray-600"> Apresentação Oral • UniCesumar </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/tecnologia de gestão na Agricultura - Otimização da Pulverização de Defensivos Agrícolas para eficiência e sustentabilidade.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-    <!--Agilidade - Promovendo a Transformação Agil-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Agilidade - Promovendo a Transformação Agil</h2>
-        <p class="text-sm text-gray-600"> Curso 6hrs • Alura </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Agilidade - Promovendo a Transformação Agil.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-    <!--Modelagem de Banco de Dados Relacional - Entendendo SQL-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Modelagem de Banco de Dados Relacional - Entendendo SQL</h2>
-        <p class="text-sm text-gray-600"> Curso 6hrs • Alura </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Modelagem de Banco de Dados Relacional - Entendendo SQL.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-    <!--Data Analysis - Google Sheets-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Data Analysis - Google Sheets</h2>
-        <p class="text-sm text-gray-600"> Curso 6hrs • Alura </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Data Analysis - Google Sheets.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-    <!--C - Conhecendo a linguagem das linguagens-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> C - Conhecendo a linguagem das linguagens</h2>
-        <p class="text-sm text-gray-600"> Curso 8hrs • Alura </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/C - Conhecendo a linguagem das linguagens.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-     <!--Python - começando com a linguagem-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Python - começando com a linguagem</h2>
-        <p class="text-sm text-gray-600"> Curso 12hrs • Alura </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Python - começando com a linguagem.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-    <!--Scrum - Agilidade em seu projeto-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Scrum - Agilidade em seu projeto</h2>
-        <p class="text-sm text-gray-600"> Curso 10hrs • Alura </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Scrum - Agilidade em seu projeto.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-    <!--Scrum parte 1 - Gerencie o seu projeto de forma ágil-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Scrum pt. 1 - Gerencie o seu projeto de forma ágil</h2>
-        <p class="text-sm text-gray-600"> Curso 5hrs • Alura </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Scrum parte 1 - Gerencie o seu projeto de forma ágil.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-    <!--Scrum parte 2 - O manifesto Agil, Liderança e Organização em SCRUM-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Scrum pt. 2 - O manifesto Agil, Liderança e Organização em SCRUM</h2>
-        <p class="text-sm text-gray-600"> Curso 5hrs • Alura </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Scrum parte 2 - O manifesto Agil, Liderança e Organização em SCRUM.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-    <!--Scrum parte 3 - Projetos com Agile-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Scrum pt. 3 - Projetos com Agile</h2>
-        <p class="text-sm text-gray-600"> Curso 6hrs • Alura </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Scrum parte 3 - Projetos com Agile.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-     <!--Scrum parte 4 - Planejando projetos com Agile-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Scrum pt. 4 - Planejando projetos com Agile</h2>
-        <p class="text-sm text-gray-600"> Curso 7hrs • Alura </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Scrum parte 4 - Planejando projetos com Agile.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-    <!--Scrum parte 5 - Executando projetos com agile-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Scrum pt. 5 - Executando projetos com agile</h2>
-        <p class="text-sm text-gray-600"> Curso 5hrs • Alura </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Scrum parte 5 - Executando projetos com agile.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-    <!--Introdução Prática à Linguagem de Programação Kotlin-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Introdução Prática à Linguagem de Programação Kotlin</h2>
-        <p class="text-sm text-gray-600"> Curso 2hrs • DIO </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Introdução Prática à Linguagem de Programação Kotlin.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
-     <!--Princípios de Agilidade e Desenvolvimento Colaborativo-->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-black">
-        <h2 class="font-bold text-lg"> Princípios de Agilidade e Desenvolvimento Colaborativo</h2>
-        <p class="text-sm text-gray-600"> Curso 9hrs • DIO </p>
-
-        <div class="mt-4 flex items-center gap-3">
-
-         <p class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Curso validado
-         </p>
-
-        <button
-          onclick="abrirCertificado('assets/certificados/Princípios de Agilidade e Desenvolvimento Colaborativo.pdf')"
-          class="text-sm text-primary font-medium hover:underline"
-        >
-          📄 Visualizar Curso
-        </button>
-      </div>
-    </div>
-
+  <main id="lista-certificados" class="max-w-5xl mx-auto p-4 space-y-6">
+    <!-- Certificados serão renderizados via JS -->
   </main>
+
   <!-- MODAL Certificado -->
   <div
     id="modalCertificado"
     class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50"
   >
     <div class="bg-white rounded-lg shadow-xl w-full max-w-4xl h-[85vh] relative">
-
       <button
         onclick="fecharCertificado()"
         class="absolute top-3 right-3 text-gray-600 hover:text-black text-xl font-bold"
       >
         ✕
       </button>
-
       <iframe
         id="iframeCertificado"
         class="w-full h-full rounded-b-lg"
         src=""
       ></iframe>
-
     </div>
   </div>
 
   <!-- JS -->
   <script src="js/modal.js"></script>
+  <script src="js/certificados.js"></script>
+  <script src="js/renderCertificados.js"></script>
+
 </body>
 </html>

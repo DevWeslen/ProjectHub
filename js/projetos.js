@@ -3,7 +3,8 @@ const projetos = [
     nome: "ProjectHub ",
     descricao: "Site pessoal  para apresentação de projetos.",
     tecnologias: ["HTML", "Tailwind CSS", "JavaScript"],
-    imagem: "assets/projetos/Projeto-Portifólio.png"
+    imagem: "assets/projetos/Projeto-Portifólio.png",
+    github:"https://github.com/DevWeslen/ProjectHub"
   },
   {
     nome: "Dashboard de Vendas",

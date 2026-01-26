@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meus Artigos Científicos | Weslen</title>
 
   <!-- FAVICON -->
@@ -15,9 +16,8 @@
 
   <!-- HEADER -->
   <header class="bg-emerald-700 text-white p-6 shadow">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0">
       <h1 class="flex items-center gap-3 text-2xl font-bold">
-        <!-- ÍCONE -->
         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none"
              viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -33,169 +33,70 @@
   </header>
 
   <!-- CONTEÚDO -->
-  <main class="max-w-5xl mx-auto p-6 space-y-6">
+  <main class="max-w-7xl mx-auto p-6 space-y-6">
 
-    <!-- A utilização de Redes Neurais na Previsão de Falhas de Equipamentos Mecânicos -->
+    <!-- Artigo 1 -->
     <div class="bg-white rounded-lg shadow p-6 border-l-4 border-emerald-600">
-      <h2 class="font-bold text-lg">
+      <h2 class="font-bold text-lg break-words">
         A utilização de redes neurais artificiais na previsão de falhas mecânicas
       </h2>
-
-      <p class="text-sm text-gray-600">
-        CONBREPRO • 2023
-      </p>
-
-      <div class="mt-4 flex items-center gap-3">
-
-        <!-- TIPO -->
-        <span class="inline-flex items-center gap-1 text-xs font-semibold
-        text-blue-700 bg-blue-100 px-3 py-1 rounded-full">
-        🇧🇷 Artigo nacional
-        </span>
-        <!-- STATUS -->
-        <span class="inline-flex items-center gap-1 text-xs font-semibold
-          text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Artigo publicado
-        </span>
-        
-        <!-- Anexar PDF -->
-        <button
-          onclick="abrirArtigo('assets/artigos/A utilização de Redes Neurais na Previsão de Falhas de Equipamentos Mecânicos.pdf')"
-          class="text-sm text-emerald-700 font-medium hover:underline"
-        >
-          📄 Visualizar artigo
-        </button>
+      <p class="text-sm text-gray-600">CONBREPRO • 2023</p>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <span class="inline-flex items-center gap-1 text-xs font-semibold text-blue-700 bg-blue-100 px-3 py-1 rounded-full">🇧🇷 Artigo nacional</span>
+        <span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">✅ Artigo publicado</span>
+        <button onclick="abrirArtigo('assets/artigos/A utilização de Redes Neurais na Previsão de Falhas de Equipamentos Mecânicos.pdf')" class="text-sm text-emerald-700 font-medium hover:underline">📄 Visualizar artigo</button>
       </div>
     </div>
 
-    <!-- Construindo o Futuro da Educação_ guiando o aprendizado com inteligência artificial  -->
+    <!-- Artigo 2 -->
     <div class="bg-white rounded-lg shadow p-6 border-l-4 border-emerald-600">
-      <h2 class="font-bold text-lg">
+      <h2 class="font-bold text-lg break-words">
         Construindo o Futuro da Educação guiando o aprendizado com IA
       </h2>
-
-      <p class="text-sm text-gray-600">
-        Latinware • 2023
-      </p>
-
-      <div class="mt-4">
-        <span class="inline-flex items-center gap-1 text-xs font-semibold
-          text-blue-700 bg-blue-100 px-3 py-1 rounded-full">
-          🌍 Publicação internacional
-        </span>
-
-        <!-- STATUS -->
-        <span class="inline-flex items-center gap-1 text-xs font-semibold
-          text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Artigo publicado
-        </span>
-
-        <!-- Anexar PDF -->
-        <button
-          onclick="abrirArtigo('assets/artigos/Construindo o Futuro da Educação_ guiando o aprendizado com inteligência artificial.pdf')"
-          class="text-sm text-emerald-700 font-medium hover:underline"
-        >
-          📄 Visualizar artigo
-        </button>
-        
+      <p class="text-sm text-gray-600">Latinware • 2023</p>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <span class="inline-flex items-center gap-1 text-xs font-semibold text-blue-700 bg-blue-100 px-3 py-1 rounded-full">🌍 Publicação internacional</span>
+        <span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">✅ Artigo publicado</span>
+        <button onclick="abrirArtigo('assets/artigos/Construindo o Futuro da Educação_ guiando o aprendizado com inteligência artificial.pdf')" class="text-sm text-emerald-700 font-medium hover:underline">📄 Visualizar artigo</button>
       </div>
     </div>
 
-    <!-- TECNOLOGIA DE GESTÃO NA AGRICULTURA: OTIMIZAÇÃO DA PULVERIZAÇÃO DE DEFENSIVOS AGRÍCOLAS PARA EFICIÊNCIA E SUSTENTABILIDADE-->
+    <!-- Artigo 3 -->
     <div class="bg-white rounded-lg shadow p-6 border-l-4 border-emerald-600">
-      <h2 class="font-bold text-lg">
+      <h2 class="font-bold text-lg break-words">
         Tecnologia de Gestão na Agricultura
       </h2>
-
-      <p class="text-sm text-gray-600">
-        EVEN3 • 2025
-      </p>
-
-      <div class="mt-4">
-        <span class="inline-flex items-center gap-1 text-xs font-semibold
-          text-blue-700 bg-blue-100 px-3 py-1 rounded-full">
-          🎓 PIBIC
-        </span>
-
-        <!-- STATUS -->
-        <span class="inline-flex items-center gap-1 text-xs font-semibold
-          text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-          ✅ Artigo publicado
-        </span>
-
-        <!-- Anexar PDF -->
-        <button
-          onclick="abrirArtigo('assets/artigos/TECNOLOGIA DE GESTÃO NA AGRICULTURA  OTIMIZAÇÃO DA PULVERIZAÇÃO DE DEFENSIVOS AGRÍCOLAS PARA EFICIÊNCIA E SUSTENTABILIDADE.pdf')"
-          class="text-sm text-emerald-700 font-medium hover:underline"
-        >
-          📄 Visualizar artigo
-        </button>
-        
+      <p class="text-sm text-gray-600">EVEN3 • 2025</p>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <span class="inline-flex items-center gap-1 text-xs font-semibold text-blue-700 bg-blue-100 px-3 py-1 rounded-full">🎓 PIBIC</span>
+        <span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">✅ Artigo publicado</span>
+        <button onclick="abrirArtigo('assets/artigos/TECNOLOGIA DE GESTÃO NA AGRICULTURA  OTIMIZAÇÃO DA PULVERIZAÇÃO DE DEFENSIVOS AGRÍCOLAS PARA EFICIÊNCIA E SUSTENTABILIDADE.pdf')" class="text-sm text-emerald-700 font-medium hover:underline">📄 Visualizar artigo</button>
       </div>
     </div>
 
-    <!-- Sistema Inteligente de Monitoramento de EPIs Utilizando Visão Computacional e Armazenamento de Dados para Ambientes Industriais -->
+    <!-- Artigo 4 -->
     <div class="bg-white rounded-lg shadow p-6 border-l-4 border-emerald-600">
-      <h2 class="font-bold text-lg">
+      <h2 class="font-bold text-lg break-words">
         Sistema Inteligente de Monitoramento de EPIs Utilizando Visão Computacional e Armazenamento de Dados para Ambientes Industriais
       </h2>
-
-      <p class="text-sm text-gray-600">
-        EVEN3 • 2025
-      </p>
-
-      <div class="mt-4">
-        <span class="inline-flex items-center gap-1 text-xs font-semibold
-          text-blue-700 bg-blue-100 px-3 py-1 rounded-full">
-          🎓 TCC
-        </span>
-
-        <!-- STATUS -->
-        <span class="inline-flex items-center gap-1 text-xs font-semibold
-          text-yellow-700 bg-yellow-100 px-3 py-1 rounded-full">
-          Buscando congressos
-        </span>
-
-        <!-- Anexar PDF -->
-        <button
-          onclick="abrirArtigo('assets/artigos/Sistema Inteligente de Monitoramento de EPIs Utilizando Visão Computacional e Armazenamento de Dados para Ambientes Industriais (6).pdf')"
-          class="text-sm text-emerald-700 font-medium hover:underline"
-        >
-          📄 Visualizar artigo
-        </button>
-        
+      <p class="text-sm text-gray-600">EVEN3 • 2025</p>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <span class="inline-flex items-center gap-1 text-xs font-semibold text-blue-700 bg-blue-100 px-3 py-1 rounded-full">🎓 TCC</span>
+        <span class="inline-flex items-center gap-1 text-xs font-semibold text-yellow-700 bg-yellow-100 px-3 py-1 rounded-full">Buscando congressos</span>
+        <button onclick="abrirArtigo('assets/artigos/Sistema Inteligente de Monitoramento de EPIs Utilizando Visão Computacional e Armazenamento de Dados para Ambientes Industriais (6).pdf')" class="text-sm text-emerald-700 font-medium hover:underline">📄 Visualizar artigo</button>
       </div>
     </div>
-
 
   </main>
 
-  <!-- MODAL (REUTILIZADO) -->
-  <div
-    id="modalArtigo"
-    class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
-
+  <!-- MODAL -->
+  <div id="modalArtigo" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
     <div class="bg-white rounded-lg w-11/12 md:w-3/4 h-5/6 relative">
-
-      <!-- FECHAR -->
-      <button
-        onclick="fecharArtigo()"
-        class="absolute top-3 right-3 z-50 text-gray-600 hover:text-black text-xl font-bold">
-        ✕
-      </button>
-
-
-      <!-- PDF -->
-      <iframe
-        id="iframeArtigo"
-        class="w-full h-full rounded-b-lg"
-        src="">
-      </iframe>
-
+      <button onclick="fecharArtigo()" class="absolute top-3 right-3 z-50 text-gray-600 hover:text-black text-xl font-bold">✕</button>
+      <iframe id="iframeArtigo" class="w-full h-full rounded-b-lg" src=""></iframe>
     </div>
   </div>
 
-  <!-- JS MODAL -->
   <script src="js/modal.js"></script>
 
 </body>
