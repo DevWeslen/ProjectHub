@@ -69,23 +69,20 @@ O objetivo do sistema é servir como **vitrine técnica**, **acadêmica** e **in
 
 ## 🧪 Estrutura do Projeto
 
-📁 projeto-portifolio/
-│
-├─ 📁 assets/ # Recursos estáticos do site
-│ ├─ 📁 artigos/ # Arquivos PDF ou imagens de artigos
-│ ├─ 📁 certificados/ # PDFs ou imagens dos certificados
-│ ├─ 📁 diplomas/ # PDFs ou imagens dos diplomas
-│ ├─ 📁 projetos/ # Arquivos relacionados aos projetos
+projeto-portifolio/
+├─ assets/ # Recursos estáticos do site
+│ ├─ artigos/ # Arquivos PDF ou imagens de artigos
+│ ├─ certificados/ # PDFs ou imagens dos certificados
+│ ├─ diplomas/ # PDFs ou imagens dos diplomas
+│ ├─ projetos/ # Arquivos relacionados aos projetos
 │ ├─ favicon.png # Ícone do site
 │ └─ foto_perfil.jpeg # Foto de perfil
-│
-├─ 📁 js/ # Scripts JavaScript
+├─ js/ # Scripts JavaScript
 │ ├─ certificados.js # Dados ou lógica relacionada a certificados
 │ ├─ modal.js # Script para modais
 │ ├─ projetos.js # Dados ou lógica relacionada a projetos
 │ ├─ render.js # Funções genéricas de renderização
 │ └─ renderCertificados.js # Renderização específica de certificados
-│
 ├─ index.html # Página inicial do portfólio
 ├─ artigos.html # Página com artigos
 ├─ certificados.html # Página com certificados
