@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>ProjectHub | Weslen Rian</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Devicon (ícones reais das stacks) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <!-- Tema customizado -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            primaryDark: '#1e40af',
+            secondary: '#0f172a',
+            background: '#f1f5f9'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-background text-gray-800">
+
+  <!-- HEADER / PERFIL (ÚNICA PARTE ALTERADA) -->
+  <header class="bg-black text-white shadow-lg">
+    <div class="max-w-7xl mx-auto p-6 flex items-center justify-between gap-6">
+
+      <!-- ESQUERDA -->
+      <div class="flex items-center gap-6">
+
+        <img
+          src="assets/foto_perfil.jpeg"
+          alt="Foto de Weslen Rian Pedro da Silva"
+          class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md"
+        />
+
+        <div>
+          <h1 class="text-2xl md:text-3xl font-bold">
+            Weslen Rian Pedro da Silva
+          </h1>
+
+          <p class="text-xs md:text-sm text-gray-300">
+            Engenharia de Software • Análise Dados • Docência • Pesquisa
+          </p>
+
+          <!-- LINKS -->
+          <div class="flex gap-3 mt-3 flex-wrap">
+            <a
+              href="assets/Weslen.curriculo.pdf"
+              target="_blank"
+              class="bg-white text-black px-4 py-1 rounded text-xs font-medium hover:bg-gray-200">
+              📄 Currículo PDF
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/weslen-rian-pedro-da-silva-467098226"
+              target="_blank"
+              class="bg-primaryDark px-4 py-1 rounded text-xs hover:bg-blue-900">
+              🔗 LinkedIn
+            </a>
+
+            <a
+              href="https://lattes.cnpq.br/8011084424490748"
+              target="_blank"
+              class="bg-primary px-4 py-1 rounded text-xs hover:bg-blue-700">
+              🎓 Currículo Lattes
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIREITA -->
+      <div class="flex flex-col items-end gap-2 min-w-[160px]">
+
+        <!-- STACKS -->
+        <div class="flex gap-3 text-xl md:text-2xl flex-wrap justify-end">
+        <i class="devicon-python-plain colored" title="Python"></i>
+        <i class="devicon-mysql-plain colored" title="MySQL"></i>
+        <i class="devicon-postgresql-plain colored" title="PostgreSQL / SQL"></i>
+        <!-- BI / Dados -->
+        <i class="devicon-powerbi-plain colored" title="Power BI"></i>
+        <i class="devicon-pandas-plain colored" title="Pandas"></i>
+        <i class="devicon-numpy-plain colored" title="NumPy"></i>
+        <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+        <i class="devicon-c-plain colored" title="C"></i>
+
+        <!-- Web (suporte ao portfólio) -->
+        <i class="devicon-html5-plain colored" title="HTML5"></i>
+        <i class="devicon-css3-plain colored" title="CSS3"></i>
+        <i class="devicon-tailwindcss-plain colored" title="Tailwind CSS"></i>
+
+        <!-- Versionamento -->
+        <i class="devicon-git-plain colored" title="Git"></i>
+        <i class="devicon-github-original colored" title="GitHub"></i>
+        </div>
+
+
+        <!-- TEXTO DIGITANDO -->
+        <span
+          id="typing-text"
+          class="text-xs md:text-sm text-gray-300 h-4 text-right">
+        </span>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- SEÇÃO ACADÊMICA (INALTERADA) -->
+  <section class="max-w-7xl mx-auto p-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- DIPLOMAS -->
+      <div class="bg-white rounded-lg shadow p-6 border-l-4 border-primary">
+        <h3 class="flex items-center gap-2 font-bold text-lg mb-2 text-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z" />
+          </svg>
+          Meus Diplomas
+        </h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Graduação, tecnólogo e formações acadêmicas.
+        </p>
+        <a href="diplomas.html" class="text-primary font-medium hover:underline">
+          Ver meus diplomas
+        </a>
+      </div>
+
+      <!-- CERTIFICADOS -->
+      <div class="bg-white rounded-lg shadow p-6 border-l-4 border-secondary">
+        <h3 class="flex items-center gap-2 font-bold text-lg mb-2 text-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5l5 5v11a2 2 0 01-2 2z" />
+          </svg>
+          Meus Certificados
+        </h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Cursos, eventos, palestras e especializações.
+        </p>
+        <a href="certificados.html" class="text-secondary font-medium hover:underline">
+          Ver meus certificados
+        </a>
+      </div>
+
+      <!-- ARTIGOS -->
+      <div class="bg-white rounded-lg shadow p-6 border-l-4 border-emerald-600">
+        <h3 class="flex items-center gap-2 font-bold text-lg mb-2 text-emerald-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2H7a2 2 0 00-2 2v2" />
+          </svg>
+          Meus Artigos Científicos
+        </h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Artigos publicados em congressos, anais e revistas científicas.
+        </p>
+        <a href="artigos.html" class="text-emerald-600 font-medium hover:underline">
+          Ver meus artigos
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <main class="max-w-7xl mx-auto p-6">
+    <h2 class="text-2xl font-bold mb-6 text-secondary">
+      Projetos em destaque
+    </h2>
+
+    <section
+      id="lista-projetos"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    </section>
+  </main>
+
+  <!-- JS -->
+  <script src="js/projetos.js"></script>
+  <script src="js/render.js"></script>
+
+  <!-- TEXTO DIGITANDO -->
+  <script>
+    const texts = [
+      "Transformando dados em decisão",
+      "Tecnologia aplicada ao mundo real",
+      "Do problema à solução",
+      "Código com propósito",
+      "Pesquisa aplicada em tecnologia",
+      "Análise e modelagem de sistemas",
+      "Engenharia orientada à eficiência",
+      "Dados como estratégia",
+      "Do dado bruto à decisão",
+      "Do problema ao código",
+      "Da análise à solução",
+      "Tecnologia com método",
+      "Pesquisa, ensino e aplicação prática",
+      "Ciência, dados e engenharia",
+      "Conhecimento aplicado à tecnologia",
+     "Formação técnica com visão estratégica"
+    ];
+
+    let index = 0;
+    let charIndex = 0;
+    let deleting = false;
+    const element = document.getElementById("typing-text");
+
+    function typeEffect() {
+      const current = texts[index];
+
+      if (!deleting) {
+        element.textContent = current.slice(0, charIndex++);
+        if (charIndex > current.length) {
+          setTimeout(() => deleting = true, 1200);
+        }
+      } else {
+        element.textContent = current.slice(0, charIndex--);
+        if (charIndex === 0) {
+          deleting = false;
+          index = (index + 1) % texts.length;
+        }
+      }
+      setTimeout(typeEffect, deleting ? 40 : 80);
+    }
+
+    typeEffect();
+  </script>
+
+</body>
+</html>

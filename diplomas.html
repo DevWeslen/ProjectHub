@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Meus Diplomas | Weslen</title>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- HEADER -->
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="flex items-center gap-3 text-2xl font-bold">
+        <!-- ÍCONE IGUAL AO INDEX -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 14l9-5-9-5-9 5 9 5z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z" />
+        </svg>
+        Meus Diplomas
+      </h1>
+
+      <a href="index.html" class="text-sm hover:underline">← Voltar</a>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="max-w-4xl mx-auto p-6 space-y-6">
+
+    <!-- ENGENHARIA DE SOFTWARE -->
+    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-blue-500">
+      <h2 class="font-bold text-lg">Engenharia de Software</h2>
+      <p class="text-sm text-gray-600">Graduação • UniCesumar</p>
+
+      <p class="mt-2 text-sm text-emerald-700 font-medium">
+        ✅ Diploma validado
+      </p>
+    </div>
+
+    <!-- ADS (ÚNICO COM PDF) -->
+    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-blue-500">
+      <h2 class="font-bold text-lg">
+        Análise e Desenvolvimento de Sistemas </h2>
+      <p class="text-sm text-gray-600"> Tecnólogo • UniCesumar</p>
+
+      <div class="mt-4 flex items-center gap-3">
+
+        <span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
+          ✅ Diploma validado
+        </span>
+
+        <button
+          onclick="abrirDiploma('assets/diplomas/Diploma_ADS_assinado.pdf')"
+          class="text-sm text-primary font-medium hover:underline"
+        >
+          📄 Visualizar diploma
+        </button>
+
+      </div>
+    </div>
+
+    <!-- MBA AI / DATA -->
+    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-blue-500">
+      <h2 class="font-bold text-lg">
+        MBA em Tecnologia para Negócios: AI, DataScience e Big Data
+      </h2>
+      <p class="text-sm text-gray-600">MBA • Faculdade Líbano</p>
+
+      <p class="mt-2 text-sm text-emerald-700 font-medium">
+        ✅ Diploma validado
+      </p>
+    </div>
+
+    <!-- MBA AGRO -->
+    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-blue-500">
+      <h2 class="font-bold text-lg">
+        Tecnologia e Inovação Aplicadas ao Agronegócio
+      </h2>
+      <p class="text-sm text-gray-600">MBA • Faculdade Líbano</p>
+
+      <p class="mt-2 text-sm text-emerald-700 font-medium">
+        ✅ Diploma validado
+      </p>
+    </div>
+
+  </main>
+
+  <!-- MODAL PDF -->
+  <div
+    id="modalDiploma"
+    class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50"
+  >
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-4xl h-[85vh] relative">
+
+      <button
+        onclick="fecharDiploma()"
+        class="absolute top-3 right-3 text-gray-600 hover:text-black text-xl font-bold"
+      >
+        ✕
+      </button>
+
+      <iframe
+        id="iframeDiploma"
+        class="w-full h-full rounded-b-lg"
+        src=""
+      ></iframe>
+
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="js/modal.js"></script>
+
+</body>
+</html>
