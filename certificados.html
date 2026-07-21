@@ -3,49 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meus Certificados | Weslen</title>
+  <title>Meus Certificados | ProjectHub - Weslen Rian</title>
+  
   <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="js/theme.js"></script>
 </head>
 
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300 min-h-screen font-sans">
 
   <!-- HEADER -->
-  <header class="bg-slate-900 text-white p-6">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <h1 class="flex items-center gap-3 text-2xl font-bold">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5l5 5v11a2 2 0 01-2 2z" />
-        </svg>
-        Meus Certificados
-      </h1>
+  <header class="bg-slate-950 text-white shadow-lg border-b border-slate-800">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-xl font-bold">
+          📜
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight">Meus Certificados</h1>
+          <p class="text-xs text-slate-400">Cursos, eventos, especializações e palestras</p>
+        </div>
+      </div>
 
-      <a href="index.html" class="text-sm hover:underline">← Voltar</a>
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle-btn" onclick="toggleTheme()" 
+                class="px-3.5 py-1.5 text-xs font-semibold rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
+          Dark
+        </button>
+        <a href="index.html" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-full transition shadow-md">
+          <span>← Voltar</span>
+        </a>
+      </div>
     </div>
   </header>
 
   <!-- CONTEÚDO -->
-  <main id="lista-certificados" class="max-w-5xl mx-auto p-4 space-y-6">
+  <main id="lista-certificados" class="max-w-4xl mx-auto px-6 py-10 space-y-4">
     <!-- Certificados serão renderizados via JS -->
   </main>
 
   <!-- MODAL Certificado -->
   <div
     id="modalCertificado"
-    class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50"
+    class="fixed inset-0 bg-slate-950/80 hidden items-center justify-center z-50 p-4 backdrop-blur-md"
   >
-    <div class="bg-white rounded-lg shadow-xl w-full max-w-4xl h-[85vh] relative">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl w-full max-w-4xl h-[85vh] relative overflow-hidden border border-slate-200 dark:border-slate-800">
       <button
         onclick="fecharCertificado()"
-        class="absolute top-3 right-3 text-gray-600 hover:text-black text-xl font-bold"
+        class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center font-bold text-lg transition shadow-md"
       >
         ✕
       </button>
       <iframe
         id="iframeCertificado"
-        class="w-full h-full rounded-b-lg"
+        class="w-full h-full"
         src=""
       ></iframe>
     </div>

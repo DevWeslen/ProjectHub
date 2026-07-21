@@ -1,12 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ProjectHub | Weslen Rian</title>
+  
+  <!-- SEO METATAGS -->
+  <title>ProjectHub | Weslen Rian - Engenharia de Dados, IA & Full Stack</title>
+  <meta name="description" content="Portfólio executivo de projetos estratégicos em Engenharia de Dados, Inteligência Artificial Aplicada, Business Intelligence e Desenvolvimento Full Stack por Weslen Rian.">
+  <meta name="keywords" content="Engenharia de Dados, Inteligência Artificial, Full Stack, Python, Next.js, Power BI, SQL, n8n, Weslen Rian">
+  <meta name="author" content="Weslen Rian Pedro da Silva">
+
+  <!-- OpenGraph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ProjectHub | Weslen Rian - Portfólio de Engenharia & IA">
+  <meta property="og:description" content="Soluções estratégicas de dados, automação com IA e desenvolvimento de sistemas de alta performance.">
+  <meta property="og:image" content="assets/foto_perfil.jpeg">
 
   <!-- FAVICON -->
   <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- GOOGLE FONTS (Outfit + Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CUSTOM CSS DESIGN SYSTEM -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,256 +35,344 @@
 
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          },
           colors: {
             primary: '#2563eb',
-            primaryDark: '#1e40af',
-            secondary: '#0f172a',
-            background: '#f1f5f9'
+            primaryDark: '#1d4ed8',
+            secondary: '#0f172a'
           }
         }
       }
     }
   </script>
+
+  <script src="js/theme.js"></script>
+  <script src="js/i18n.js"></script>
 </head>
 
-<body class="bg-background text-gray-800">
+<body class="bg-slate-50 dark:bg-[#030712] text-slate-800 dark:text-slate-100 transition-colors duration-300 min-h-screen font-sans selection:bg-blue-500 selection:text-white">
 
-<!-- HEADER -->
-<header class="bg-black text-white shadow-lg">
-  <div class="max-w-7xl mx-auto p-6 flex flex-col lg:flex-row gap-6 lg:items-center lg:justify-between">
+<!-- HERO / HEADER SECTION (ANIMATED MESH GRADIENT) -->
+<header class="hero-mesh-bg text-white shadow-2xl relative border-b border-slate-800/80 w-full">
 
-    <!-- ESQUERDA -->
-    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+  <!-- TOOLBAR SUPERIOR -->
+  <div class="w-full max-w-[1600px] mx-auto px-4 sm:px-6 pt-5 flex justify-between items-center relative z-20">
+    <div class="flex items-center gap-2.5 bg-slate-900/80 border border-slate-800 px-3.5 py-1.5 rounded-full backdrop-blur-md">
+      <span class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+      <span class="text-xs font-bold tracking-widest uppercase text-slate-300">ProjectHub</span>
+    </div>
 
-      <img
-        src="assets/foto_perfil.jpeg"
-        alt="Foto de Weslen Rian Pedro da Silva"
-        class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md"
-      />
+    <div class="flex items-center gap-3">
+      <button 
+        id="lang-toggle-btn"
+        onclick="toggleLanguage()" 
+        class="px-4 py-1.5 text-xs font-bold rounded-full bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700/80 backdrop-blur-md transition-all duration-200 shadow-lg hover:scale-105 active:scale-95">
+        🇺🇸 EN
+      </button>
+      <button 
+        id="theme-toggle-btn"
+        onclick="toggleTheme()" 
+        class="px-4 py-1.5 text-xs font-bold rounded-full bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700/80 backdrop-blur-md transition-all duration-200 shadow-lg hover:scale-105 active:scale-95">
+        Dark
+      </button>
+    </div>
+  </div>
 
-      <div class="text-center sm:text-left">
-        <h1 class="text-xl sm:text-2xl md:text-3xl font-bold">
-          Weslen Rian Pedro da Silva
-        </h1>
+  <!-- CONTAINER CONTEÚDO HERO -->
+  <div class="w-full max-w-[1600px] mx-auto px-3 sm:px-4 py-8 lg:py-12 relative z-20">
+    <div class="glass-hero-card rounded-3xl p-8 lg:p-10 border border-white/10 shadow-2xl relative overflow-hidden">
+      
+      <div class="flex flex-col lg:flex-row gap-8 lg:items-center lg:justify-between">
 
-        <p class="text-xs sm:text-sm text-gray-300 mt-1">
-          Engenharia de Software • Análise de Dados • Docência • Pesquisa
-        </p>
+        <!-- ESQUERDA: AVATAR & NOME -->
+        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
 
-        <div class="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
-          <a href="assets/Weslen.curriculo.pdf" target="_blank"
-             class="bg-white text-black px-3 py-1 rounded text-xs font-medium hover:bg-gray-200">
-            📄 Currículo PDF
-          </a>
+          <!-- Avatar com Anel Neon Animado -->
+          <div class="avatar-aura shrink-0">
+            <img
+              src="assets/foto_perfil.jpeg"
+              alt="Foto de Weslen Rian Pedro da Silva"
+              class="relative z-10 w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover border-4 border-slate-950 shadow-2xl"
+            />
+          </div>
 
-          <a href="https://www.linkedin.com/in/weslen-rian-pedro-da-silva-467098226" target="_blank"
-             class="bg-primaryDark px-3 py-1 rounded text-xs hover:bg-blue-900">
-            🔗 LinkedIn
-          </a>
+          <div class="text-center sm:text-left flex flex-col justify-center">
+            <!-- Badge Status -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold mb-3 self-center sm:self-start backdrop-blur-md shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span>Disponível para Novos Projetos</span>
+            </div>
 
-          <a href="https://lattes.cnpq.br/8011084424490748" target="_blank"
-             class="bg-primary px-3 py-1 rounded text-xs hover:bg-blue-700">
-            🎓 Lattes
-          </a>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white font-heading leading-none mb-2">
+              Weslen Rian Pedro da Silva
+            </h1>
+
+            <p class="text-xs sm:text-sm text-slate-300 font-semibold tracking-wider text-gradient-primary uppercase" data-i18n="headerSubtitle">
+              Engenharia de Software • Análise de Dados • Docência • Pesquisa
+            </p>
+
+            <!-- Botoes Pills 3D -->
+            <div class="flex flex-wrap justify-center sm:justify-start gap-3 mt-5">
+              <a id="curriculum-link" href="assets/Weslen.curriculo.pdf" data-href-pt="assets/Weslen.curriculo.pdf" data-href-en="assets/Weslen.resume.pdf" target="_blank" data-i18n="curriculumBtn"
+                 class="bg-gradient-to-r from-white to-slate-200 hover:from-slate-100 hover:to-white text-slate-950 px-4 py-2 rounded-full text-xs font-extrabold transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5 flex items-center gap-2">
+                📄 Currículo PDF
+              </a>
+
+              <a href="https://www.linkedin.com/in/weslen-rian-pedro-da-silva-467098226" target="_blank"
+                 class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white px-4 py-2 rounded-full text-xs font-extrabold transition-all border border-blue-400/30 shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5 flex items-center gap-2">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                LinkedIn
+              </a>
+
+              <a href="https://lattes.cnpq.br/8011084424490748" target="_blank"
+                 class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white px-4 py-2 rounded-full text-xs font-extrabold transition-all border border-indigo-400/30 shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5 flex items-center gap-2">
+                🎓 Lattes
+              </a>
+            </div>
+          </div>
         </div>
+
+        <!-- DIREITA: STACKS E EFEITO TYPING METALIZADO -->
+        <div class="flex flex-col items-center lg:items-end justify-center gap-4 border-t lg:border-t-0 border-white/10 pt-6 lg:pt-0">
+          
+          <div class="bg-slate-950/80 border border-white/10 p-4 rounded-2xl backdrop-blur-xl shadow-2xl flex flex-wrap justify-center lg:justify-end gap-4 text-2xl sm:text-3xl">
+            <i class="devicon-python-plain colored hover:scale-125 transition-transform duration-300" title="Python"></i>
+            <i class="devicon-typescript-plain colored hover:scale-125 transition-transform duration-300" title="TypeScript"></i>
+            <i class="devicon-nextjs-plain colored text-white hover:scale-125 transition-transform duration-300" title="Next.js"></i>
+            <i class="devicon-microsoftsqlserver-plain colored hover:scale-125 transition-transform duration-300" title="SQL Server"></i>
+            <i class="devicon-postgresql-plain colored hover:scale-125 transition-transform duration-300" title="PostgreSQL"></i>
+            <i class="devicon-mysql-plain colored hover:scale-125 transition-transform duration-300" title="MySQL"></i>
+            <i class="devicon-javascript-plain colored hover:scale-125 transition-transform duration-300" title="JavaScript"></i>
+            <i class="devicon-tailwindcss-plain colored hover:scale-125 transition-transform duration-300" title="Tailwind CSS"></i>
+            <i class="devicon-git-plain colored hover:scale-125 transition-transform duration-300" title="Git"></i>
+          </div>
+
+          <!-- Typing Bar -->
+          <div class="flex items-center gap-2 px-5 py-2 rounded-full bg-slate-950/90 border border-blue-500/30 text-xs sm:text-sm font-mono shadow-inner">
+            <span class="text-blue-400 font-bold">&gt;_</span>
+            <span id="typing-text" class="h-4 flex items-center font-bold text-gradient-primary"></span>
+          </div>
+        </div>
+
       </div>
+
     </div>
-
-    <!-- DIREITA -->
-    <div class="flex flex-col items-center lg:items-end gap-3">
-
-      <!-- STACKS -->
-      <div class="flex flex-wrap justify-center lg:justify-end gap-3 text-xl md:text-2xl">
-        <i class="devicon-python-plain colored"></i>
-        <i class="devicon-typescript-plain colored"></i>
-        <i class="devicon-nextjs-plain colored text-white"></i>
-        <i class="devicon-microsoftsqlserver-plain colored"></i>
-        <i class="devicon-postgresql-plain colored"></i>
-        <i class="devicon-mysql-plain colored"></i>
-        <i class="devicon-javascript-plain colored"></i>
-        <i class="devicon-tailwindcss-plain colored"></i>
-        <i class="devicon-git-plain colored"></i>
-        <i class="devicon-github-original colored"></i>
-      </div>
-
-      <!-- TEXTO DIGITANDO -->
-      <span id="typing-text"
-        class="text-xs sm:text-sm text-gray-300 h-4 text-center lg:text-right">
-      </span>
-    </div>
-
   </div>
 </header>
 
-<!-- SEÇÃO ACADÊMICA -->
-<section class="max-w-7xl mx-auto p-6">
+<!-- SEÇÃO ACADÊMICA & CERTIFICAÇÕES (CARDS EM WRAPPER GRADIENT) -->
+<section class="max-w-7xl mx-auto px-6 py-12">
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
     <!-- DIPLOMAS -->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-primary">
-      <h3 class="font-bold text-lg mb-2 text-primary">Meus Diplomas</h3>
-      <p class="text-sm text-gray-600 mb-3">
-        Graduação, tecnólogo e formações acadêmicas.
-      </p>
-      <a href="diplomas.html" class="text-primary font-medium hover:underline">
-        Ver meus diplomas
-      </a>
+    <div class="gradient-card-wrapper">
+      <div class="glass-card card-shine rounded-[1.2rem] p-6 h-full flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 text-white flex items-center justify-center font-bold text-2xl shadow-lg shadow-blue-500/30">
+              🎓
+            </div>
+            <span class="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">Formação</span>
+          </div>
+          <h3 class="font-black text-xl text-slate-900 dark:text-white mb-2 font-heading" data-i18n="diplomasTitle">Meus Diplomas</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-6 leading-relaxed" data-i18n="diplomasDesc">
+            Graduação, tecnólogo e formações acadêmicas.
+          </p>
+        </div>
+        <a href="diplomas.html" class="inline-flex items-center justify-between w-full text-xs font-black text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 pt-3 border-t border-slate-200 dark:border-slate-800/80 group" data-i18n="diplomasLink">
+          <span>Ver meus diplomas</span>
+          <span class="group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </div>
     </div>
 
     <!-- CERTIFICADOS -->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-secondary">
-      <h3 class="font-bold text-lg mb-2 text-secondary">Meus Certificados</h3>
-      <p class="text-sm text-gray-600 mb-3">
-        Cursos, eventos, palestras e especializações.
-      </p>
-      <a href="certificados.html" class="text-secondary font-medium hover:underline">
-        Ver meus certificados
-      </a>
+    <div class="gradient-card-wrapper">
+      <div class="glass-card card-shine rounded-[1.2rem] p-6 h-full flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white flex items-center justify-center font-bold text-2xl shadow-lg shadow-indigo-500/30">
+              📜
+            </div>
+            <span class="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">Cursos</span>
+          </div>
+          <h3 class="font-black text-xl text-slate-900 dark:text-white mb-2 font-heading" data-i18n="certificadosTitle">Meus Certificados</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-6 leading-relaxed" data-i18n="certificadosDesc">
+            Cursos, eventos, palestras e especializações.
+          </p>
+        </div>
+        <a href="certificados.html" class="inline-flex items-center justify-between w-full text-xs font-black text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 pt-3 border-t border-slate-200 dark:border-slate-800/80 group" data-i18n="certificadosLink">
+          <span>Ver meus certificados</span>
+          <span class="group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </div>
     </div>
 
     <!-- ARTIGOS -->
-    <div class="bg-white rounded-lg shadow p-6 border-l-4 border-emerald-600">
-      <h3 class="font-bold text-lg mb-2 text-emerald-600">Meus Artigos Científicos</h3>
-      <p class="text-sm text-gray-600 mb-3">
-        Artigos publicados em congressos e revistas científicas.
-      </p>
-      <a href="artigos.html" class="text-emerald-600 font-medium hover:underline">
-        Ver meus artigos
-      </a>
+    <div class="gradient-card-wrapper">
+      <div class="glass-card card-shine rounded-[1.2rem] p-6 h-full flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center font-bold text-2xl shadow-lg shadow-emerald-500/30">
+              🔬
+            </div>
+            <span class="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">Pesquisa</span>
+          </div>
+          <h3 class="font-black text-xl text-slate-900 dark:text-white mb-2 font-heading" data-i18n="artigosTitle">Meus Artigos Científicos</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-6 leading-relaxed" data-i18n="artigosDesc">
+            Artigos publicados em congressos e revistas científicas.
+          </p>
+        </div>
+        <a href="artigos.html" class="inline-flex items-center justify-between w-full text-xs font-black text-emerald-600 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 pt-3 border-t border-slate-200 dark:border-slate-800/80 group" data-i18n="artigosLink">
+          <span>Ver meus artigos</span>
+          <span class="group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </div>
     </div>
 
   </div>
 </section>
 
 <!-- ESPECIALIDADES TÉCNICAS & SOLUÇÕES -->
-<section class="max-w-7xl mx-auto p-6">
-  <h2 class="text-2xl font-bold mb-8 text-secondary flex items-center gap-2">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-    </svg>
-    Expertise & Soluções Estratégicas
-  </h2>
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="flex items-center gap-3.5 mb-10">
+    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white flex items-center justify-center shadow-xl shadow-blue-500/30">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    </div>
+    <div>
+      <h2 class="text-3xl font-black text-gradient-title font-heading tracking-tight" data-i18n="expertiseTitle">
+        Expertise & Soluções Estratégicas
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">Domínio técnico focado em inteligência operacional e arquitetura corporativa</p>
+    </div>
+  </div>
   
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     
     <!-- IA Aplicada -->
-    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-      <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-primary">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div class="glass-card p-7 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 shadow-lg hover:shadow-2xl transition-all duration-300 group">
+      <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.989-2.386l-.548-.547z" />
         </svg>
       </div>
-      <h3 class="font-bold text-lg mb-3 text-secondary">Inteligência Artificial Aplicada</h3>
-      <ul class="text-sm text-gray-600 space-y-2">
-        <li class="flex items-start gap-2">
-          <span class="text-primary mt-1">•</span>
-          Fluxos automatizados com IA Generativa (OpenAI API) e n8n para insights e relatórios.
+      <h3 class="font-bold text-xl mb-4 text-slate-900 dark:text-white font-heading" data-i18n="expIaTitle">Inteligência Artificial Aplicada</h3>
+      <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-3">
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue-500 mt-1.5 shrink-0 shadow-sm shadow-blue-500"></span>
+          <span data-i18n="expIaB1">Fluxos automatizados com IA Generativa (OpenAI API) e n8n para insights e relatórios.</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span class="text-primary mt-1">•</span>
-          Pré-análise logística e identificação de padrões operacionais com IA.
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue-500 mt-1.5 shrink-0 shadow-sm shadow-blue-500"></span>
+          <span data-i18n="expIaB2">Pré-análise logística e identificação de padrões operacionais com IA.</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span class="text-primary mt-1">•</span>
-          Pipelines inteligentes para enriquecimento de dados e análise preditiva.
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue-500 mt-1.5 shrink-0 shadow-sm shadow-blue-500"></span>
+          <span data-i18n="expIaB3">Pipelines inteligentes para enriquecimento de dados e análise preditiva.</span>
         </li>
       </ul>
     </div>
 
     <!-- Engenharia de Dados -->
-    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-      <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 text-indigo-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+    <div class="glass-card p-7 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 shadow-lg hover:shadow-2xl transition-all duration-300 group">
+      <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg shadow-indigo-500/30 group-hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s-8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
         </svg>
       </div>
-      <h3 class="font-bold text-lg mb-3 text-secondary">Engenharia de Dados & Automação</h3>
-      <ul class="text-sm text-gray-600 space-y-2">
-        <li class="flex items-start gap-2">
-          <span class="text-indigo-600 mt-1">•</span>
-          Desenvolvimento de pipelines ETL/ELT para dados logísticos e telemetria.
+      <h3 class="font-bold text-xl mb-4 text-slate-900 dark:text-white font-heading" data-i18n="expDataTitle">Engenharia de Dados & Automação</h3>
+      <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-3">
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-indigo-500 mt-1.5 shrink-0 shadow-sm shadow-indigo-500"></span>
+          <span data-i18n="expDataB1">Desenvolvimento de pipelines ETL/ELT para dados logísticos e telemetria.</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span class="text-indigo-600 mt-1">•</span>
-          Automação de processos com Power Automate, n8n e scripts Python.
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-indigo-500 mt-1.5 shrink-0 shadow-sm shadow-indigo-500"></span>
+          <span data-i18n="expDataB2">Automação de processos com Power Automate, n8n e scripts Python.</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span class="text-indigo-600 mt-1">•</span>
-          Integração de múltiplas fontes (PostgreSQL, SQL Server, APIs) para centralização analítica.
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-indigo-500 mt-1.5 shrink-0 shadow-sm shadow-indigo-500"></span>
+          <span data-i18n="expDataB3">Integração de múltiplas fontes (PostgreSQL, SQL Server, APIs) para centralização analítica.</span>
         </li>
       </ul>
     </div>
 
     <!-- BI & Analytics -->
-    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-      <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 text-emerald-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div class="glass-card p-7 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 shadow-lg hover:shadow-2xl transition-all duration-300 group">
+      <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg shadow-emerald-500/30 group-hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
         </svg>
       </div>
-      <h3 class="font-bold text-lg mb-3 text-secondary">Business Intelligence & Analytics</h3>
-      <ul class="text-sm text-gray-600 space-y-2">
-        <li class="flex items-start gap-2">
-          <span class="text-emerald-600 mt-1">•</span>
-          Dashboards executivos em tempo real para KPIs logísticos e performance.
+      <h3 class="font-bold text-xl mb-4 text-slate-900 dark:text-white font-heading" data-i18n="expBiTitle">Business Intelligence & Analytics</h3>
+      <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-3">
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0 shadow-sm shadow-emerald-500"></span>
+          <span data-i18n="expBiB1">Dashboards executivos em tempo real para KPIs logísticos e performance.</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span class="text-emerald-600 mt-1">•</span>
-          Consultas SQL avançadas e modelagem analítica para grandes volumes de dados.
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0 shadow-sm shadow-emerald-500"></span>
+          <span data-i18n="expBiB2">Consultas SQL avançadas e modelagem analítica para grandes volumes de dados.</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span class="text-emerald-600 mt-1">•</span>
-          Soluções orientadas a dados para suporte estratégico e melhoria contínua.
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0 shadow-sm shadow-emerald-500"></span>
+          <span data-i18n="expBiB3">Soluções orientadas a dados para suporte estratégico e melhoria contínua.</span>
         </li>
       </ul>
     </div>
 
     <!-- Arquitetura Full Stack -->
-    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-      <div class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4 text-slate-800">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div class="glass-card p-7 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-slate-400/50 shadow-lg hover:shadow-2xl transition-all duration-300 group">
+      <div class="w-14 h-14 bg-gradient-to-br from-slate-700 to-slate-900 rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg shadow-slate-900/30 group-hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
         </svg>
       </div>
-      <h3 class="font-bold text-lg mb-3 text-secondary">Arquitetura & Sistemas Inteligentes</h3>
-      <ul class="text-sm text-gray-600 space-y-2">
-        <li class="flex items-start gap-2">
-          <span class="text-slate-800 mt-1">•</span>
-          Sistemas full stack escaláveis com Next.js, TypeScript e Prisma ORM.
+      <h3 class="font-bold text-xl mb-4 text-slate-900 dark:text-white font-heading" data-i18n="expArchTitle">Arquitetura & Sistemas Inteligentes</h3>
+      <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-3">
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-slate-500 mt-1.5 shrink-0 shadow-sm shadow-slate-500"></span>
+          <span data-i18n="expArchB1">Sistemas full stack escaláveis com Next.js, TypeScript e Prisma ORM.</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span class="text-slate-800 mt-1">•</span>
-          Soluções focadas em rastreabilidade, geolocalização e auditoria operacional.
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-slate-500 mt-1.5 shrink-0 shadow-sm shadow-slate-500"></span>
+          <span data-i18n="expArchB2">Soluções focadas em rastreabilidade, geolocalização e auditoria operacional.</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span class="text-slate-800 mt-1">•</span>
-          Arquiteturas modernas com foco em performance e integração sistêmica.
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-slate-500 mt-1.5 shrink-0 shadow-sm shadow-slate-500"></span>
+          <span data-i18n="expArchB3">Arquiteturas modernas com foco em performance e integração sistêmica.</span>
         </li>
       </ul>
     </div>
 
     <!-- Pesquisa & Inovação -->
-    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition md:col-span-2 lg:col-span-1">
-      <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 text-purple-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div class="glass-card p-7 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-purple-500/50 shadow-lg hover:shadow-2xl transition-all duration-300 md:col-span-2 lg:col-span-1 group">
+      <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18 18.246 18.477 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       </div>
-      <h3 class="font-bold text-lg mb-3 text-secondary">Pesquisa, Inovação & IA</h3>
-      <ul class="text-sm text-gray-600 space-y-2">
-        <li class="flex items-start gap-2">
-          <span class="text-purple-600 mt-1">•</span>
-          Pesquisas voltadas à aplicação de Redes Neurais e Análise Preditiva.
+      <h3 class="font-bold text-xl mb-4 text-slate-900 dark:text-white font-heading" data-i18n="expResearchTitle">Pesquisa, Inovação & IA</h3>
+      <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-3">
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-purple-500 mt-1.5 shrink-0 shadow-sm shadow-purple-500"></span>
+          <span data-i18n="expResearchB1">Pesquisas voltadas à aplicação de Redes Neurais e Análise Preditiva.</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span class="text-purple-600 mt-1">•</span>
-          Autor de artigos científicos nacionais e internacionais em IA e Engenharia.
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-purple-500 mt-1.5 shrink-0 shadow-sm shadow-purple-500"></span>
+          <span data-i18n="expResearchB2">Autor de artigos científicos nacionais e internacionais em IA e Engenharia.</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span class="text-purple-600 mt-1">•</span>
-          Participação em iniciativas de inovação integrando dados e automação.
+        <li class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-purple-500 mt-1.5 shrink-0 shadow-sm shadow-purple-500"></span>
+          <span data-i18n="expResearchB3">Participação em iniciativas de inovação integrando dados e automação.</span>
         </li>
       </ul>
     </div>
@@ -273,27 +380,69 @@
   </div>
 </section>
 
-<!-- PROJETOS ESTRATÉGICOS -->
-<main class="max-w-7xl mx-auto p-6">
-  <h2 class="text-2xl font-bold mb-6 text-secondary">
-    Projetos Estratégicos & Relevantes
-  </h2>
+<!-- PROJETOS ESTRATÉGICOS & FILTROS -->
+<main class="max-w-7xl mx-auto px-6 py-12">
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10">
+    <div>
+      <h2 class="text-3xl font-black text-gradient-title font-heading tracking-tight" data-i18n="projectsTitle">
+        Projetos Estratégicos & Relevantes
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">Explore o catálogo de soluções desenvolvidas</p>
+    </div>
+
+    <!-- FILTROS POR CATEGORIA EM PILLS SEGMENTED CONTROL -->
+    <div class="glass-nav-pill flex flex-wrap gap-2 p-1.5 rounded-full shadow-xl">
+      <button 
+        onclick="filtrarProjetos('todos')" 
+        data-filter="todos" 
+        data-i18n="filterAll"
+        class="filter-btn px-5 py-2.5 text-xs font-black rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/30 transition-all">
+        Todos os Projetos
+      </button>
+      <button 
+        onclick="filtrarProjetos('dados')" 
+        data-filter="dados" 
+        data-i18n="filterData"
+        class="filter-btn px-5 py-2.5 text-xs font-black rounded-full text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">
+        Engenharia & Dados
+      </button>
+      <button 
+        onclick="filtrarProjetos('web')" 
+        data-filter="web" 
+        data-i18n="filterWeb"
+        class="filter-btn px-5 py-2.5 text-xs font-black rounded-full text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">
+        Desenvolvimento Web
+      </button>
+    </div>
+  </div>
 
   <section
     id="lista-projetos"
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
   </section>
 </main>
 
-<!-- MODAL DETALHES DO PROJETO -->
+<!-- FOOTER -->
+<footer class="bg-slate-950 border-t border-slate-800/80 py-10 text-center text-xs text-slate-400 relative z-20">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+    <div>
+      <span class="font-extrabold text-white font-heading">ProjectHub</span> • Weslen Rian Pedro da Silva
+    </div>
+    <div class="text-slate-500 font-mono text-[11px]">
+      Engenharia de Software • Dados & IA
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL DETALHES DO PROJETO (GLASSMODAL) -->
 <div
   id="modalDetalhes"
-  class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50 p-4"
+  class="fixed inset-0 bg-slate-950/85 hidden items-center justify-center z-50 p-4 backdrop-blur-2xl transition-all duration-300"
 >
-  <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto relative p-6 md:p-8">
+  <div class="glass-card rounded-[2rem] shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto relative p-7 md:p-9 border border-white/10">
     <button
       onclick="fecharDetalhes()"
-      class="absolute top-4 right-4 text-gray-600 hover:text-black text-2xl font-bold"
+      class="absolute top-5 right-5 w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 flex items-center justify-center font-black text-xl transition-all shadow-md"
     >
       ✕
     </button>
@@ -304,8 +453,8 @@
   </div>
 </div>
 
-<script src="js/modal.js"></script>
 <script src="js/projetos.js"></script>
+<script src="js/modal.js"></script>
 <script src="js/render.js"></script>
 
 <!-- TEXTO DIGITANDO -->
@@ -324,7 +473,7 @@ function typeEffect() {
   const current = texts[index];
   if (!deleting) {
     element.textContent = current.slice(0, charIndex++);
-    if (charIndex > current.length) setTimeout(() => deleting = true, 1200);
+    if (charIndex > current.length) setTimeout(() => deleting = true, 1500);
   } else {
     element.textContent = current.slice(0, charIndex--);
     if (charIndex === 0) {
@@ -332,7 +481,7 @@ function typeEffect() {
       index = (index + 1) % texts.length;
     }
   }
-  setTimeout(typeEffect, deleting ? 40 : 80);
+  setTimeout(typeEffect, deleting ? 30 : 60);
 }
 typeEffect();
 </script>
